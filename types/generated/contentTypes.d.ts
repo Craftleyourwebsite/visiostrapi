@@ -765,12 +765,6 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
           localized: false;
         };
       }>;
-    collaboration_quote: Schema.Attribute.Text &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

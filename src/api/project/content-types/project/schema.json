@@ -139,14 +139,7 @@
         }
       }
     },
-    "collaboration_quote": {
-      "type": "text",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
+
     "thumbnail": {
       "type": "media",
       "multiple": false,
