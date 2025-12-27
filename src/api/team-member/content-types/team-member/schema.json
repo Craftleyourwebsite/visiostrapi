@@ -1,0 +1,49 @@
+{
+    "kind": "collectionType",
+    "collectionName": "team_members",
+    "info": {
+        "singularName": "team-member",
+        "pluralName": "team-members",
+        "displayName": "Team Member",
+        "description": "Team members for the About/Team section"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "role": {
+            "type": "string",
+            "required": true
+        },
+        "order": {
+            "type": "integer",
+            "default": 0
+        },
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "facebook_link": {
+            "type": "string",
+            "regex": "^(https?:\\/\\/)?(www\\.)?facebook.com\\/[a-zA-Z0-9(\\.?)?]"
+        },
+        "twitter_link": {
+            "type": "string"
+        },
+        "instagram_link": {
+            "type": "string"
+        },
+        "email": {
+            "type": "email"
+        }
+    }
+}

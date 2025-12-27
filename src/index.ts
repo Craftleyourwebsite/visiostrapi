@@ -40,6 +40,8 @@ export default {
         'api::news.news-post.findOne',
         'api::category.category.find',
         'api::category.category.findOne',
+        'api::team-member.team-member.find',
+        'api::team-member.team-member.findOne',
       ];
 
       for (const action of actions) {
