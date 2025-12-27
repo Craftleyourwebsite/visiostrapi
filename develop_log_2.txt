@@ -1,0 +1,153 @@
+
+> my-backoffice@0.1.0 develop
+> strapi develop
+
+- Cleaning dist dir /home/kevin/visioltd/my-backoffice/dist
+✔ Cleaning dist dir (7ms)
+- Loading Strapi
+[2025-12-27 16:00:27.092] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+[2025-12-27 16:00:27.311] [32minfo[39m: 🚀 ANTIGRAVITY BOOTSTRAP STARTED
+[2025-12-27 16:00:27.320] [32minfo[39m: ℹ️ Public Role ID: 2
+[2025-12-27 16:00:27.321] [32minfo[39m: ✅ Permission already active: api::project.project.find
+[2025-12-27 16:00:27.324] [32minfo[39m: ✅ Permission already active: api::project.project.findOne
+[2025-12-27 16:00:27.324] [32minfo[39m: ✅ Permission already active: api::global-setting.global-setting.find
+[2025-12-27 16:00:27.324] [32minfo[39m: 🚀 ANTIGRAVITY BOOTSTRAP FINISHED - Public API should be accessible
+- Building build context
+
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (183ms)
+- Creating admin
+✔ Creating admin (1484ms)
+✔ Loading Strapi (4662ms)
+- Generating types
+✔ Generating types (590ms)
+- Compiling TS
+- Cleaning dist dir /home/kevin/visioltd/my-backoffice/dist
+✔ Cleaning dist dir (58ms)
+✔ Compiling TS (2580ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Dec 27 2025 16:00:32 GMT+0400 (Mauritius St… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 7851 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 131982                                           [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.0 (node v22.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Enterprise                                       [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m .tmp/data.db                                     [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2025-12-27 16:00:32.196] [32minfo[39m: Strapi started successfully
+[2025-12-27 16:00:32.527] [32mhttp[39m: GET /api/projects?locale=en&populate=* (84 ms) 200
+[2025-12-27 16:00:32.536] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+- Cleaning dist dir /home/kevin/visioltd/my-backoffice/dist
+✔ Cleaning dist dir (5ms)
+[2025-12-27 16:00:33.050] [32mhttp[39m: GET /api/projects?locale=en&populate=* (47 ms) 200
+[2025-12-27 16:00:33.060] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:33.441] [32mhttp[39m: GET /api/projects?locale=en&populate=* (65 ms) 200
+[2025-12-27 16:00:33.450] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:33.839] [32mhttp[39m: GET /api/projects?locale=en&populate=* (63 ms) 200
+[2025-12-27 16:00:33.845] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:34.249] [32mhttp[39m: GET /api/projects?locale=en&populate=* (90 ms) 200
+[2025-12-27 16:00:34.278] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:34.655] [32mhttp[39m: GET /api/projects?locale=en&populate=* (49 ms) 200
+[2025-12-27 16:00:34.660] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:35.186] [32mhttp[39m: GET /api/projects?locale=en&populate=* (63 ms) 200
+[2025-12-27 16:00:35.190] [32minfo[39m: Shutting down Strapi
+[2025-12-27 16:00:35.196] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2025-12-27 16:00:37.675] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+[2025-12-27 16:00:37.762] [32minfo[39m: 🚀 ANTIGRAVITY BOOTSTRAP STARTED
+[2025-12-27 16:00:37.764] [32minfo[39m: ℹ️ Public Role ID: 2
+[2025-12-27 16:00:37.765] [32minfo[39m: ✅ Permission already active: api::project.project.find
+[2025-12-27 16:00:37.765] [32minfo[39m: ✅ Permission already active: api::project.project.findOne
+[2025-12-27 16:00:37.765] [32minfo[39m: ✅ Permission already active: api::global-setting.global-setting.find
+[2025-12-27 16:00:37.765] [32minfo[39m: 🚀 ANTIGRAVITY BOOTSTRAP FINISHED - Public API should be accessible
+- Building build context
+
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (61ms)
+- Creating admin
+✔ Creating admin (439ms)
+✔ Loading Strapi (1499ms)
+- Generating types
+✔ Generating types (578ms)
+- Compiling TS
+- Cleaning dist dir /home/kevin/visioltd/my-backoffice/dist
+✔ Cleaning dist dir (38ms)
+✔ Compiling TS (2875ms)
+
+ Project information
+
+[90m┌────────────────────[39m[90m┬──────────────────────────────────────────────────┐[39m
+[90m│[39m Time               [90m│[39m Sat Dec 27 2025 16:00:41 GMT+0400 (Mauritius St… [90m│[39m
+[90m│[39m Launched in        [90m│[39m 4992 ms                                          [90m│[39m
+[90m│[39m Environment        [90m│[39m development                                      [90m│[39m
+[90m│[39m Process PID        [90m│[39m 132057                                           [90m│[39m
+[90m│[39m Version            [90m│[39m 5.33.0 (node v22.16.0)                           [90m│[39m
+[90m│[39m Edition            [90m│[39m Enterprise                                       [90m│[39m
+[90m│[39m Database           [90m│[39m sqlite                                           [90m│[39m
+[90m│[39m Database name      [90m│[39m .tmp/data.db                                     [90m│[39m
+[90m└────────────────────[39m[90m┴──────────────────────────────────────────────────┘[39m
+
+ Actions available
+
+Welcome back!
+To access the server ⚡️, go to:
+http://localhost:1337
+
+[2025-12-27 16:00:41.775] [32minfo[39m: Strapi started successfully
+[2025-12-27 16:00:42.242] [32mhttp[39m: GET /api/projects?locale=en&populate=* (81 ms) 200
+[2025-12-27 16:00:42.247] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+- Cleaning dist dir /home/kevin/visioltd/my-backoffice/dist
+✔ Cleaning dist dir (7ms)
+[2025-12-27 16:00:42.751] [32mhttp[39m: GET /api/projects?locale=en&populate=* (48 ms) 200
+[2025-12-27 16:00:42.759] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:43.205] [32mhttp[39m: GET /api/projects?locale=en&populate=* (102 ms) 200
+[2025-12-27 16:00:43.219] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:43.682] [32mhttp[39m: GET /api/projects?locale=en&populate=* (39 ms) 200
+[2025-12-27 16:00:43.694] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:44.092] [32mhttp[39m: GET /api/projects?locale=en&populate=* (34 ms) 200
+[2025-12-27 16:00:44.099] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:44.565] [32mhttp[39m: GET /api/projects?locale=en&populate=* (98 ms) 200
+[2025-12-27 16:00:44.588] [32minfo[39m: File changed: /home/kevin/visioltd/my-backoffice/develop_log_2.txt
+[2025-12-27 16:00:44.799] [32minfo[39m: Shutting down Strapi
+[2025-12-27 16:00:44.810] [32minfo[39m: Strapi has been shut down
+- Loading Strapi
+[2025-12-27 16:00:47.820] [33mwarn[39m: admin.auth.options.expiresIn is deprecated and will be removed in Strapi 6. Please configure admin.auth.sessions.maxRefreshTokenLifespan and admin.auth.sessions.maxSessionLifespan.
+[2025-12-27 16:00:47.933] [32minfo[39m: 🚀 ANTIGRAVITY BOOTSTRAP STARTED
+[2025-12-27 16:00:47.936] [32minfo[39m: ℹ️ Public Role ID: 2
+[2025-12-27 16:00:47.937] [32minfo[39m: ✅ Permission already active: api::project.project.find
+[2025-12-27 16:00:47.937] [32minfo[39m: ✅ Permission already active: api::project.project.findOne
+[2025-12-27 16:00:47.937] [32minfo[39m: ✅ Permission already active: api::global-setting.global-setting.find
+[2025-12-27 16:00:47.937] [32minfo[39m: 🚀 ANTIGRAVITY BOOTSTRAP FINISHED - Public API should be accessible
+- Building build context
+
+[INFO] Including the following ENV variables as part of the JS bundle:
+    - ADMIN_PATH
+    - STRAPI_ADMIN_BACKEND_URL
+    - STRAPI_TELEMETRY_DISABLED
+    - STRAPI_AI_URL
+    - STRAPI_ANALYTICS_URL
+✔ Building build context (133ms)
+- Creating admin
+[2025-12-27 16:00:48.566] [32minfo[39m: Shutting down Strapi
+[2025-12-27 16:00:48.579] [32minfo[39m: Strapi has been shut down

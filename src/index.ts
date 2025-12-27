@@ -36,6 +36,10 @@ export default {
         'api::project.project.find',
         'api::project.project.findOne',
         'api::global-setting.global-setting.find',
+        'api::news.news-post.find',
+        'api::news.news-post.findOne',
+        'api::category.category.find',
+        'api::category.category.findOne',
       ];
 
       for (const action of actions) {
