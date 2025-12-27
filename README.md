@@ -32,13 +32,26 @@ npm run build
 yarn build
 ```
 
-## ⚙️ Deployment
-
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
-
 ```
 yarn strapi deploy
 ```
+
+## 🏗️ Railway Deployment
+
+To successfully deploy this Strapi application on Railway, you must configure the following environment variables in your project settings:
+
+| Variable | Description |
+| :--- | :--- |
+| `ADMIN_JWT_SECRET` | Secret used to sign JWT tokens for the admin panel. |
+| `API_TOKEN_SALT` | Salt used for API tokens. |
+| `TRANSFER_TOKEN_SALT` | Salt used for data transfer tokens. |
+| `JWT_SECRET` | Secret for the Users-Permissions plugin. |
+| `APP_KEYS` | A comma-separated list of secure keys for application signing. |
+| `ENCRYPTION_KEY` | Key used for the internal encryption service. |
+| `DATABASE_URL` | (Optional) If you are using an external database. |
+
+> [!TIP]
+> Use secure random strings for these values. You can generate them using `openssl rand -base64 32`.
 
 ## 📚 Learn more
 
