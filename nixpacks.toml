@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"
+
+[variables]
+  STRAPI_SKIP_TRACKING = "true"
+  NODE_ENV = "production"
