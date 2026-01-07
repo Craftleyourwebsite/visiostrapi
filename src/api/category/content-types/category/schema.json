@@ -30,6 +30,20 @@
             "targetField": "name",
             "required": true
         },
+        "group": {
+            "type": "string",
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "projects": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::project.project",
+            "mappedBy": "categories"
+        },
         "order": {
             "type": "integer",
             "default": 0

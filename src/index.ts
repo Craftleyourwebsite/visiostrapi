@@ -1,3 +1,5 @@
+import { seedCategories } from './seed-categories';
+
 export default {
   /**
    * An asynchronous register function that runs before
@@ -17,6 +19,8 @@ export default {
   async bootstrap({ strapi }) {
     try {
       strapi.log.info('🚀 ANTIGRAVITY BOOTSTRAP STARTED');
+
+      await seedCategories(strapi);
 
       // Fetch Public role with its existing permissions
       const publicRole = await strapi.db.query('plugin::users-permissions.role').findOne({
