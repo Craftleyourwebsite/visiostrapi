@@ -1,0 +1,34 @@
+{
+    "kind": "singleType",
+    "collectionName": "selected_project_lists",
+    "info": {
+        "singularName": "selected-project-list",
+        "pluralName": "selected-project-lists",
+        "displayName": "Selected Project List",
+        "description": "Direct management of the projects displayed in the summary table"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {
+        "i18n": {
+            "localized": true
+        }
+    },
+    "attributes": {
+        "title": {
+            "type": "string",
+            "required": true,
+            "pluginOptions": {
+                "i18n": {
+                    "localized": true
+                }
+            }
+        },
+        "projects": {
+            "type": "component",
+            "repeatable": true,
+            "component": "tables.project-item"
+        }
+    }
+}

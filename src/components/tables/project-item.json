@@ -1,0 +1,31 @@
+{
+    "collectionName": "components_tables_project_items",
+    "info": {
+        "displayName": "Project Item",
+        "icon": "list",
+        "description": "Individual project entry for the summary table"
+    },
+    "options": {},
+    "attributes": {
+        "year": {
+            "type": "string",
+            "required": true
+        },
+        "location": {
+            "type": "string",
+            "required": true
+        },
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "client": {
+            "type": "string",
+            "required": true
+        },
+        "category": {
+            "type": "string",
+            "required": true
+        }
+    }
+}

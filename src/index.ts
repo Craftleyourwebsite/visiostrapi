@@ -46,6 +46,7 @@ export default {
         'api::category.category.findOne',
         'api::team-member.team-member.find',
         'api::team-member.team-member.findOne',
+        'api::selected-project-list.selected-project-list.find',
       ];
 
       for (const action of actions) {
@@ -67,6 +68,22 @@ export default {
           strapi.log.info(`✅ Permission already active: ${action}`);
         }
       }
+
+      // --- DATABASE CLEANUP ---
+      strapi.log.info('🧹 CHECKING FOR TEST PROJECTS TO CLEAN UP...');
+      const deletedProjects = await strapi.db.query('api::project.project').deleteMany({
+        where: {
+          title: {
+            $contains: 'TEST TITLE'
+          }
+        }
+      });
+      if (deletedProjects.count > 0) {
+        strapi.log.info(`✅ Cleaned up ${deletedProjects.count} test projects.`);
+      } else {
+        strapi.log.info('ℹ️ No test projects found to clean up.');
+      }
+      // ------------------------
 
       strapi.log.info('🚀 ANTIGRAVITY BOOTSTRAP FINISHED - Public API should be accessible');
 

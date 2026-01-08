@@ -875,6 +875,47 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiSelectedProjectListSelectedProjectList
+  extends Struct.SingleTypeSchema {
+  collectionName: 'selected_project_lists';
+  info: {
+    description: 'Direct management of the projects displayed in the summary table';
+    displayName: 'Selected Project List';
+    pluralName: 'selected-project-lists';
+    singularName: 'selected-project-list';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::selected-project-list.selected-project-list'
+    >;
+    projects: Schema.Attribute.Component<'tables.project-item', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
   collectionName: 'team_members';
   info: {
@@ -1426,6 +1467,7 @@ declare module '@strapi/strapi' {
       'api::global-setting.global-setting': ApiGlobalSettingGlobalSetting;
       'api::news.news-post': ApiNewsNewsPost;
       'api::project.project': ApiProjectProject;
+      'api::selected-project-list.selected-project-list': ApiSelectedProjectListSelectedProjectList;
       'api::team-member.team-member': ApiTeamMemberTeamMember;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
