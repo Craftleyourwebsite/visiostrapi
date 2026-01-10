@@ -44,6 +44,9 @@
         },
         "email": {
             "type": "email"
+        },
+        "description": {
+            "type": "text"
         }
     }
 }
