@@ -1,0 +1,22 @@
+{
+    "kind": "singleType",
+    "collectionName": "africas",
+    "info": {
+        "singularName": "africa",
+        "pluralName": "africas",
+        "displayName": "Africa"
+    },
+    "options": {
+        "draftAndPublish": false
+    },
+    "attributes": {
+        "image": {
+            "type": "media",
+            "multiple": false,
+            "required": true,
+            "allowedTypes": [
+                "images"
+            ]
+        }
+    }
+}

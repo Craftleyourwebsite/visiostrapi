@@ -1,0 +1,51 @@
+{
+    "kind": "collectionType",
+    "collectionName": "previous_team_members",
+    "info": {
+        "singularName": "previous-team-member",
+        "pluralName": "previous-team-members",
+        "displayName": "Previous Team Member",
+        "description": "Previous/Former team members for the About Us page"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "name": {
+            "type": "string",
+            "required": true
+        },
+        "role": {
+            "type": "string",
+            "required": true
+        },
+        "order": {
+            "type": "integer",
+            "default": 0
+        },
+        "photo": {
+            "type": "media",
+            "multiple": false,
+            "required": false,
+            "allowedTypes": [
+                "images"
+            ]
+        },
+        "facebook_link": {
+            "type": "string"
+        },
+        "twitter_link": {
+            "type": "string"
+        },
+        "instagram_link": {
+            "type": "string"
+        },
+        "email": {
+            "type": "email"
+        },
+        "description": {
+            "type": "text"
+        }
+    }
+}
