@@ -795,7 +795,7 @@ export interface ApiPreviousTeamMemberPreviousTeamMember
     description: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
     facebook_link: Schema.Attribute.String;
-    instagram_link: Schema.Attribute.String;
+    linkedin_link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1144,7 +1144,7 @@ export interface ApiTeamMemberTeamMember extends Struct.CollectionTypeSchema {
     description: Schema.Attribute.Text;
     email: Schema.Attribute.Email;
     facebook_link: Schema.Attribute.String;
-    instagram_link: Schema.Attribute.String;
+    linkedin_link: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

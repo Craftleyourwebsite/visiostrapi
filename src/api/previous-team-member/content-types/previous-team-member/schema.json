@@ -38,7 +38,7 @@
         "twitter_link": {
             "type": "string"
         },
-        "instagram_link": {
+        "linkedin_link": {
             "type": "string"
         },
         "email": {

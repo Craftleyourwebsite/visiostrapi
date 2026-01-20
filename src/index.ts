@@ -85,6 +85,14 @@ export default {
       }
       // ------------------------
 
+      // --- TEAM MEMBER ORDER FIX ---
+      // DISABLED: This was resetting manual order changes on every restart
+      // strapi.log.info('🔢 FIXING TEAM MEMBER ORDER...');
+      // await reorderTeamMembers(strapi);
+      // await reorderPreviousTeamMembers(strapi);
+      // If you need to reset all orders once, uncomment and restart, then re-comment
+      // ------------------------
+
       strapi.log.info('🚀 ANTIGRAVITY BOOTSTRAP FINISHED - Public API should be accessible');
 
     } catch (e) {
@@ -92,3 +100,73 @@ export default {
     }
   },
 };
+
+/**
+ * Reorder all team members to ensure consistent 0, 1, 2, 3... ordering
+ * Sorts by ID (which reflects creation order) to assign sequential orders
+ */
+async function reorderTeamMembers(strapi: any) {
+  try {
+    // Sort by ID to maintain consistent creation order
+    const allMembers = await strapi.db.query('api::team-member.team-member').findMany({
+      select: ['id', 'order', 'name'],
+      orderBy: { id: 'asc' },
+    });
+
+    let updated = 0;
+    for (let i = 0; i < allMembers.length; i++) {
+      const member = allMembers[i];
+      if (member.order !== i) {
+        await strapi.db.query('api::team-member.team-member').update({
+          where: { id: member.id },
+          data: { order: i },
+        });
+        updated++;
+        strapi.log.info(`  📝 Team Member "${member.name}" (ID:${member.id}) order: ${member.order} → ${i}`);
+      }
+    }
+
+    if (updated > 0) {
+      strapi.log.info(`✅ Fixed order for ${updated} team members (total: ${allMembers.length})`);
+    } else {
+      strapi.log.info(`ℹ️ Team members order already correct (total: ${allMembers.length})`);
+    }
+  } catch (error) {
+    strapi.log.error('❌ Error reordering team members:', error);
+  }
+}
+
+/**
+ * Reorder all previous team members to ensure consistent 0, 1, 2, 3... ordering
+ * Sorts by ID (which reflects creation order) to assign sequential orders
+ */
+async function reorderPreviousTeamMembers(strapi: any) {
+  try {
+    // Sort by ID to maintain consistent creation order
+    const allMembers = await strapi.db.query('api::previous-team-member.previous-team-member').findMany({
+      select: ['id', 'order', 'name'],
+      orderBy: { id: 'asc' },
+    });
+
+    let updated = 0;
+    for (let i = 0; i < allMembers.length; i++) {
+      const member = allMembers[i];
+      if (member.order !== i) {
+        await strapi.db.query('api::previous-team-member.previous-team-member').update({
+          where: { id: member.id },
+          data: { order: i },
+        });
+        updated++;
+        strapi.log.info(`  📝 Previous Team Member "${member.name}" (ID:${member.id}) order: ${member.order} → ${i}`);
+      }
+    }
+
+    if (updated > 0) {
+      strapi.log.info(`✅ Fixed order for ${updated} previous team members (total: ${allMembers.length})`);
+    } else {
+      strapi.log.info(`ℹ️ Previous team members order already correct (total: ${allMembers.length})`);
+    }
+  } catch (error) {
+    strapi.log.error('❌ Error reordering previous team members:', error);
+  }
+}
